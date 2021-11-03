@@ -22,6 +22,54 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Root colors */
+
+:root {
+    --red-color : rgba(255, 51, 102, 0.8);
+    --pink-color : rgba(250, 138, 187, 0.8);
+    --purple-color : rgba(137, 87, 255, 0.8);
+    --blue-color : rgba(0, 187, 255, 0.8);
+    --green-color : rgba(0, 204, 136, 0.8);
+    --yellow-color : rgba(255, 187, 0, 0.8);
+    --orange-color : rgba(255, 107, 0, 0.8);
+    --dark-mode : rgba(7, 5, 16, 0.8);
+    --text-color-grey : rgba(108, 117, 125, 0.8);
+}
+
+/* Every color seperate class */
+
+.red-color {
+    background-color : var(--red-color);
+}
+
+.pink-color {
+    background-color : var(--pink-color);
+}
+
+.purple-color {
+    background-color : var(--purple-color);
+}
+
+.blue-color {
+    background-color : var(--blue-color);
+}
+
+.green-color {
+    background-color : var(--green-color);
+}
+
+.yellow-color {
+    background-color : var(--yellow-color);
+}
+
+.orange-color {
+    background-color : var(--orange-color);
+}
+
+.dark-mode-color {
+    background-color : var(--dark-mode);
+}
+
 #container-top {
     display: flex;
     align-items: center;
@@ -47,17 +95,17 @@ body {
     flex-direction: row;
     align-items: center;
     font-weight: 600;
-    color: #6c757d;
+    color: var(--text-color-grey);
 }
 
 .nav-left>span {
     cursor: pointer;
-    color: #6c757d;
+    color: var(--dark-mode);
     transition: .4s all;
 }
 
 .nav-left>span:hover {
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--text-color-grey);
     transform: scale(1.01, 1.01);
 }
 
@@ -78,9 +126,9 @@ body {
 #nav-logo {
     cursor: pointer;
     padding: .3rem .4rem;
-    border: .1rem solid rgba(0, 0, 0, 0.9);
+    border: .1rem solid var(--dark-mode);
     border-radius: 100%;
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--dark-mode);
     margin-right: 1.5rem;
     position: relative;
     transition: .5s all;
@@ -89,22 +137,20 @@ body {
 #nav-logo:hover {
     transform: scale(1.1, 1.1);
     border-radius: 100%;
-    border: .1rem solid #6c757d;
-    color: #6c757d;
+    border: .1rem solid var(--text-color-grey);
+    color: var(--text-color-grey);
 }
 
 #login {
-    background-color: rgba(243, 196, 251, 0.6);
+    cursor: pointer;
     padding: 0.5rem 0.8rem;
-    border: .1rem solid rgba(255, 198, 255, 0.5);
     border-radius: 0.5rem;
+    border: none;
     transition: 0.4s all;
 }
 
 #login:hover {
-    transform: scale(1.03, 1.03);
-    background-color: rgba(255, 198, 255, 0.5);
-    border: .1rem solid rgba(243, 196, 251, 1);
+    transform: scale(1.1, 1.1);
 }
 
 .drop-down-menu {
@@ -112,6 +158,7 @@ body {
     height: 0px;
     width: 11rem;
     background-color: #fff;
+    color: rgba(6, 6, 0, 0.8);
     position: absolute;
     top: 46px;
     right: 106px;
@@ -204,11 +251,11 @@ body {
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: var(--red-color);
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px var(--red-color);
 }
 
 input:checked+.slider:before {
@@ -239,7 +286,7 @@ input:checked+.slider:before {
     width: 11rem;
     background-color: #fff;
     border-radius: 18px 2px;
-    /* display: flex; */
+    color: rgba(6, 6, 0, 0.8);
     position: absolute;
     top: 46px;
     right: 106px;
@@ -265,44 +312,51 @@ input:checked+.slider:before {
     margin-right: 15px;
 }
 
+.color-toggle {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-left: 75px;
+}
+
 .red {
-    background-color: red;
-    box-shadow: 0px 0px 8px 1px red;
+    background-color:var(--red-color);
+    box-shadow: 0px 0px 4px 1px var(--red-color);
 }
 
 .pink {
-    background-color: pink;
-    box-shadow: 0px 0px 8px 1px pink;
+    background-color: var(--pink-color);
+    box-shadow: 0px 0px 4px 1px var(--pink-color);
 }
 
 .purple {
-    background-color: purple;
-    box-shadow: 0px 0px 8px 1px purple;
+    background-color:var(--purple-color);
+    box-shadow: 0px 0px 4px 1px var(--purple-color);
 }
 
 .blue {
-    background-color: blue;
-    box-shadow: 0px 0px 8px 1px blue;
+    background-color: var(--blue-color);
+    box-shadow: 0px 0px 4px 1px var(--blue-color);
 }
 
 .green {
-    background-color: green;
-    box-shadow: 0px 0px 8px 1px green;
+    background-color: var(--green-color);
+    box-shadow: 0px 0px 4px 1px var(--green-color);
 }
 
 .yellow {
-    background-color: yellow;
-    box-shadow: 0px 0px 8px 1px yellow;
+    background-color: var(--yellow-color);
+    box-shadow: 0px 0px 4px 1px var(--yellow-color);
 }
 
 .orange {
-    background-color: orange;
-    box-shadow: 0px 0px 8px 1px orange;
+    background-color: var(--orange-color);
+    box-shadow: 0px 0px 4px 1px var(--orange-color);
 }
 
 .back {
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-color-grey);
     margin: 10px 17px;
     padding-bottom: 5px;
 }
