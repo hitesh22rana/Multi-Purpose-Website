@@ -5,6 +5,7 @@ const colors_menu = document.querySelector('.colors-menu');
 const back = document.querySelector('.back')
 
 user_logo.addEventListener('click', () => {
+    user_logo.classList.toggle('br-25')
     drop_down.classList.toggle('drop-down-menu-display');
     if (colors_menu.classList.contains('display-flex')) {
         colors_menu.classList.toggle('display-flex')
