@@ -36,135 +36,61 @@ color_scheme.forEach(individual_color => {
             login_button_color.style.backgroundColor = 'var(--red-color)';
             body.style.backgroundImage = 'linear-gradient( to bottom, rgba(255, 101, 102, 0.3) 10.8%, rgba(205, 180, 219, 0.5) 90%)';
             document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--red-color);");
-            for (let i = 0; i < 7; i++) {
-                color_scheme[i].classList.remove('pink-color')
-                color_scheme[i].classList.remove('red-color')
-                color_scheme[i].classList.remove('purple-color')
-                color_scheme[i].classList.remove('blue-color')
-                color_scheme[i].classList.remove('yellow-color')
-                color_scheme[i].classList.remove('green-color')
-                color_scheme[i].classList.remove('orange-color')
-            }
-            color_scheme[0].classList.add('red-color')
 
 
-        } else if (name === 'Pink') {
+        } 
+        
+        else if (name === 'Pink') {
             new_color.style.backgroundColor = 'var(--pink-color)';
             new_color.style.boxShadow = '0px 0px 4px 1px var(--pink-color)';
             login_button_color.style.backgroundColor = 'var(--pink-color)';
             document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--pink-color);");
             body.style.backgroundImage = 'linear-gradient( to bottom, rgba(250, 138, 187, 0.3)  10.8%, rgba(255, 201, 202, 0.3) 90%)';
-            for (let i = 0; i < 7; i++) {
-                color_scheme[i].classList.remove('pink-color')
-                color_scheme[i].classList.remove('red-color')
-                color_scheme[i].classList.remove('purple-color')
-                color_scheme[i].classList.remove('blue-color')
-                color_scheme[i].classList.remove('yellow-color')
-                color_scheme[i].classList.remove('green-color')
-                color_scheme[i].classList.remove('orange-color')
-            }
-            color_scheme[1].classList.add('pink-color')
 
-
-
-        } else if (name === 'Purple') {
+        } 
+        
+        else if (name === 'Purple') {
             new_color.style.backgroundColor = 'var(--purple-color)';
             new_color.style.boxShadow = '0px 0px 4px 1px var(--purple-color)';
             login_button_color.style.backgroundColor = 'var(--purple-color)';
             document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--purple-color);");
             body.style.backgroundImage = 'linear-gradient( to bottom, rgba(137, 87, 255, 0.25) 10.8%, rgba(205, 180, 219, 0.5) 90%)';
-            for (let i = 0; i < 7; i++) {
-                color_scheme[i].classList.remove('pink-color')
-                color_scheme[i].classList.remove('red-color')
-                color_scheme[i].classList.remove('purple-color')
-                color_scheme[i].classList.remove('blue-color')
-                color_scheme[i].classList.remove('yellow-color')
-                color_scheme[i].classList.remove('green-color')
-                color_scheme[i].classList.remove('orange-color')
-            }
-            color_scheme[2].classList.add('purple-color')
 
-
-
-        } else if (name === 'Blue') {
+        }
+        
+        else if (name === 'Blue') {
             new_color.style.backgroundColor = 'var(--blue-color)';
             new_color.style.boxShadow = '0px 0px 4px 1px var(--blue-color)';
             login_button_color.style.backgroundColor = 'var(--blue-color)';
             document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--blue-color);");
             body.style.backgroundImage = 'linear-gradient( to bottom, rgba(0, 187, 255, 0.15) 10.8%, rgba(205, 180, 219, 0.5) 90%)';
-            for (let i = 0; i < 7; i++) {
-                color_scheme[i].classList.remove('pink-color')
-                color_scheme[i].classList.remove('red-color')
-                color_scheme[i].classList.remove('purple-color')
-                color_scheme[i].classList.remove('blue-color')
-                color_scheme[i].classList.remove('yellow-color')
-                color_scheme[i].classList.remove('green-color')
-                color_scheme[i].classList.remove('orange-color')
-            }
-            color_scheme[3].classList.add('blue-color')
 
-
-        } else if (name === 'Green') {
+        } 
+        
+        else if (name === 'Green') {
             new_color.style.backgroundColor = 'var(--green-color)';
             new_color.style.boxShadow = '0px 0px 4px 1px var(--green-color)';
             login_button_color.style.backgroundColor = 'var(--green-color)';
             document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--green-color);");
             body.style.backgroundImage = 'linear-gradient( to bottom, rgba(0, 204, 137, 0.2) 10.8%, rgba(220, 240, 249, 0.8) 90%)';
-            for (let i = 0; i < 7; i++) {
-                color_scheme[i].classList.remove('pink-color')
-                color_scheme[i].classList.remove('red-color')
-                color_scheme[i].classList.remove('purple-color')
-                color_scheme[i].classList.remove('blue-color')
-                color_scheme[i].classList.remove('yellow-color')
-                color_scheme[i].classList.remove('green-color')
-                color_scheme[i].classList.remove('orange-color')
-            }
-            color_scheme[4].classList.add('green-color')
 
-
-        } else if (name === 'Yellow') {
+        }
+        
+        else if (name === 'Yellow') {
             new_color.style.backgroundColor = 'var(--yellow-color)';
             new_color.style.boxShadow = '0px 0px 4px 1px var(--yellow-color)';
             login_button_color.style.backgroundColor = 'var(--yellow-color)';
             document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--yellow-color);");
             body.style.backgroundImage = 'linear-gradient( to bottom, rgba(255, 187, 0, 0.2) 10.8%, rgba(220, 240, 0, 0.15) 90%)';
-            for (let i = 0; i < 7; i++) {
-                color_scheme[i].classList.remove('pink-color')
-                color_scheme[i].classList.remove('red-color')
-                color_scheme[i].classList.remove('purple-color')
-                color_scheme[i].classList.remove('blue-color')
-                color_scheme[i].classList.remove('yellow-color')
-                color_scheme[i].classList.remove('green-color')
-                color_scheme[i].classList.remove('orange-color')
-            }
-            color_scheme[5].classList.add('yellow-color')
 
-
-
-        } else if (name == 'Orange') {
+        } 
+        
+        else if (name == 'Orange') {
             new_color.style.backgroundColor = 'var(--orange-color)';
             new_color.style.boxShadow = '0px 0px 4px 1px var(--orange-color)';
             login_button_color.style.backgroundColor = 'var(--orange-color)';
             document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--orange-color);");
             body.style.backgroundImage = 'linear-gradient( to bottom, rgba(255, 107, 0, 0.3) 10.8%, rgba(255, 101, 102, 0.3) 90%)';
-            for (let i = 0; i < 7; i++) {
-                color_scheme[i].classList.remove('pink-color')
-                color_scheme[i].classList.remove('red-color')
-                color_scheme[i].classList.remove('purple-color')
-                color_scheme[i].classList.remove('blue-color')
-                color_scheme[i].classList.remove('yellow-color')
-                color_scheme[i].classList.remove('green-color')
-                color_scheme[i].classList.remove('orange-color')
-            }
-            color_scheme[6].classList.add('orange-color')
         }
-
     });
 });
-
-
-// body.addEventListener('click', () => {
-//     if (drop_down.classList.contains('drop-down-menu-display')) {
-//         drop_down.classList.remove('drop-down-menu-display')
-//     }
-// })

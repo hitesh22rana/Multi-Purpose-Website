@@ -69,7 +69,6 @@ body {
     background-color: var(--orange-color);
 }
 
-
 /* Every color seperate class */
 
 .color-change {
@@ -167,6 +166,7 @@ body {
     border-radius: 0.5rem;
     border: none;
     transition: 0.4s all;
+    font-weight: bold;
 }
 
 #login:hover {
@@ -223,9 +223,46 @@ body {
     background-color: rgba(206, 212, 218, 0.2);
 }
 
-.colors:hover {
-    border-radius: 18px 2px 0px 0px;
-    /* background-color: rgba(206, 212, 218, 0.2); */
+.color-red:hover {
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(255, 51, 102, 0.3);
+    box-shadow: 0px 0px 4px 1px rgba(255, 51, 102, 0.4);
+}
+
+.color-pink:hover {
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(250, 138, 187, 0.4);
+    box-shadow: 0px 0px 4px 1px rgba(250, 138, 187, 0.4);
+}
+
+.color-purple:hover {
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(137, 87, 255, 0.3);
+    box-shadow: 0px 0px 4px 1px rgba(137, 87, 255, 0.4);
+}
+
+.color-blue:hover {
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(0, 187, 255, 0.3);;
+    box-shadow: 0px 0px 4px 1px rgba(0, 187, 255, 0.4);;
+}
+
+.color-green:hover {
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(0, 204, 136, 0.3);
+    box-shadow: 0px 0px 4px 1px rgba(0, 204, 136, 0.4);
+}
+
+.color-yellow:hover {
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(255, 187, 0, 0.3);
+    box-shadow: 0px 0px 4px 1px rgba(255, 187, 0, 0.4);
+}
+
+.color-orange:hover {
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(255, 107, 0, 0.3);
+    box-shadow: 0px 0px 4px 1px rgba(255, 107, 0, 0.4);
 }
 
 .toggle-color {
@@ -410,7 +447,6 @@ input:checked+.slider:before {
 /* Track */
 
  ::-webkit-scrollbar-track {
-    /* box-shadow: inset 0 0 5px grey; */
     border-radius: 10px;
 }
 
@@ -419,5 +455,4 @@ input:checked+.slider:before {
 
  ::-webkit-scrollbar-thumb {
     background: var(--red-color);
-    /* border-radius: 5px; */
 }
