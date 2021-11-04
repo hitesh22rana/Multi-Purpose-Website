@@ -486,6 +486,8 @@ input:checked+.slider:before {
     padding: 2rem 0.5rem;
     box-shadow: 5px 7px 15px #00000008;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .bots h3 {
@@ -505,6 +507,7 @@ input:checked+.slider:before {
 
 .contents img {
     width: 64px;
+    height: 72px;
     margin-right: 1rem;
     border-radius: 20%;
 }
@@ -519,11 +522,68 @@ input:checked+.slider:before {
     letter-spacing: 0.02rem;
 }
 
+.top-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-h1 {
+    display: flex;
+    width: 90%;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-container {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row;
+    width: 90%;
+    height: 3.5rem;
+    justify-content: center;
+}
+
+#site-search {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    background-color: rgba(108, 117, 125, 0.2);
+    font-size: 1.1rem;
+}
+
+.search-icon {
+    cursor: pointer;
+    margin-left: 0.5rem;
+    width: 3.5rem;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background-color: var(--red-color);
+    transition: all .5s;
+}
+
+.search-icon:hover {
+    transform: scale(1.1, 1.1);
+}
+
 @media (max-width:920px) {
+
     .bots {
         flex-direction: column;
     }
+    
     .right {
         margin-top: 50px;
+    }
+
+    .heading-h1 {
+        font-size: 0.9rem;
     }
 }
