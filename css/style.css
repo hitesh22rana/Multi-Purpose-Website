@@ -486,6 +486,8 @@ input:checked+.slider:before {
     padding: 2rem 0.5rem;
     box-shadow: 5px 7px 15px #00000008;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .bots h3 {
@@ -505,6 +507,7 @@ input:checked+.slider:before {
 
 .contents img {
     width: 64px;
+    height: 72px;
     margin-right: 1rem;
     border-radius: 20%;
 }
