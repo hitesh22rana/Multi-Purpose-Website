@@ -12,6 +12,11 @@ const bottom = document.querySelector('.bottom');
 const d = document.documentElement;
 const search_icon = document.querySelector('.search-icon');
 const nav_search_bar = document.querySelector('.nav-bar-search-bar-container');
+const search_bar_container = document.querySelector('.search-bar-container')
+const site_search = document.querySelector('#site-search')
+
+
+;
 
 user_logo.addEventListener('click', () => {
     drop_down.classList.toggle('drop-down-menu-display');
@@ -140,25 +145,30 @@ color_scheme.forEach(individual_color => {
 
 window.addEventListener('scroll', (e) => {
     container_top.style.background = '#ffffffE6';
-    container_top.style.opacity = '0.95';
-    
-    if(window.scrollY < 200) {
-        scroll_value = 0 + window.scrollY/200;
-        nav_search_bar.style.opacity = scroll_value;
-    }
+    // container_top.style.opacity = '0.95';
 
-    else {
+
+    if (d.scrollTop > 140) {
         nav_search_bar.style.opacity = '1';
-    }
+        search_bar_container.style.opacity = '0';
+        container_top.style.opacity = '0.98';
 
-    colors_menu.style.transform = 'translate(0,24px)';
-    drop_down.style.transform = 'translate(0,24px)';
-    container_top.style.backdropFilter = 'blur(10px)';
+
+    } else {
+        nav_search_bar.style.opacity = '0';
+        search_bar_container.style.opacity = '1';
+        let num = (d.scrollTop / 145);
+        container_top.style.opacity = `${num}`;
+
+    }
+    colors_menu.style.transform = 'translate(0,25px)';
+    drop_down.style.transform = 'translate(0,25px)';
+    container_top.style.backdropFilter = 'blur(30px)';
     if (d.scrollTop === 0) {
         container_top.style.background = 'transparent';
         container_top.style.opacity = '1';
         colors_menu.style.transform = 'translate(0,0)';
-        drop_down.style.transform = 'translate(0,0)'; 
-        nav_search_bar.style.opacity = '0';   
-    }   
+        drop_down.style.transform = 'translate(0,0)';
+        nav_search_bar.style.opacity = '0';
+    }
 })
