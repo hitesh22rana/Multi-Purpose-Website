@@ -11,6 +11,7 @@ const container_top = document.querySelector('#container-top');
 const bottom = document.querySelector('.bottom');
 const d = document.documentElement;
 const search_icon = document.querySelector('.search-icon');
+const nav_search_bar = document.querySelector('.nav-bar-search-bar-container');
 
 user_logo.addEventListener('click', () => {
     drop_down.classList.toggle('drop-down-menu-display');
@@ -137,9 +138,18 @@ color_scheme.forEach(individual_color => {
     });
 });
 
-document.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', (e) => {
     container_top.style.background = '#ffffffE6';
     container_top.style.opacity = '0.95';
+    
+    if(window.scrollY < 200) {
+        scroll_value = 0 + window.scrollY/200;
+        nav_search_bar.style.opacity = scroll_value;
+    }
+
+    else {
+        nav_search_bar.style.opacity = '1';
+    }
 
     colors_menu.style.transform = 'translate(0,24px)';
     drop_down.style.transform = 'translate(0,24px)';
@@ -148,7 +158,7 @@ document.addEventListener('scroll', (e) => {
         container_top.style.background = 'transparent';
         container_top.style.opacity = '1';
         colors_menu.style.transform = 'translate(0,0)';
-        drop_down.style.transform = 'translate(0,0)';
-
-    }
+        drop_down.style.transform = 'translate(0,0)'; 
+        nav_search_bar.style.opacity = '0';   
+    }   
 })
