@@ -15,8 +15,16 @@ const nav_search_bar = document.querySelector('.nav-bar-search-bar-container');
 const search_bar_container = document.querySelector('.search-bar-container')
 const site_search = document.querySelector('#site-search')
 
+const colors_array = ['Red', 'Pink', 'Purple', 'Blue', 'Green', 'Yellow', 'Orange']
+const background_array = ['linear-gradient( to bottom, rgba(255, 101, 102, 0.3) 10.8%, rgba(205, 180, 219, 0.5) 90%)',
+    'linear-gradient( to bottom, rgba(250, 138, 187, 0.3)  10.8%, rgba(255, 201, 202, 0.3) 90%)',
+    'linear-gradient( to bottom, rgba(137, 87, 255, 0.25) 10.8%, rgba(205, 180, 219, 0.5) 90%)',
+    'linear-gradient( to bottom, rgba(0, 187, 255, 0.15) 10.8%, rgba(205, 180, 219, 0.5) 90%)',
+    'linear-gradient( to bottom, rgba(0, 204, 137, 0.2) 10.8%, rgba(220, 240, 249, 0.8) 90%)',
+    'linear-gradient( to bottom, rgba(255, 187, 0, 0.2) 10.8%, rgba(220, 240, 0, 0.15) 90%)',
+    'linear-gradient( to bottom, rgba(255, 107, 0, 0.3) 10.8%, rgba(255, 101, 102, 0.3) 90%)'
+]
 
-;
 
 user_logo.addEventListener('click', () => {
     drop_down.classList.toggle('drop-down-menu-display');
@@ -35,118 +43,34 @@ back.addEventListener('click', () => {
     colors_menu.classList.toggle('display-flex')
 })
 
-color_scheme.forEach(individual_color => {
+for (let individual_color of color_scheme) {
     individual_color.addEventListener('click', (e) => {
         let name = e.target.outerText;
         let new_color = document.querySelector('.color-toggle-changed-color');
         let login_button_color = document.querySelector('.color-change');
 
-
-        if (name === 'Red') {
-            new_color.style.backgroundColor = 'var(--red-color)';
-            new_color.style.boxShadow = '0px 0px 4px 1px var(--red-color)';
-            login_button_color.style.backgroundColor = 'var(--red-color)';
-            search_icon.style.backgroundColor = 'var(--red-color)';
-            body.style.backgroundImage = 'linear-gradient( to bottom, rgba(255, 101, 102, 0.3) 10.8%, rgba(205, 180, 219, 0.5) 90%)';
-            document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--red-color);");
-            for (let b of bots_h3) {
-                b.style.borderBottom = '1px solid var(--red-color)';
-            }
-            for (let h of head) {
-                h.style.color = 'var(--red-color)'
-            }
-
-        } else if (name === 'Pink') {
-            new_color.style.backgroundColor = 'var(--pink-color)';
-            new_color.style.boxShadow = '0px 0px 4px 1px var(--pink-color)';
-            login_button_color.style.backgroundColor = 'var(--pink-color)';
-            search_icon.style.backgroundColor = 'var(--pink-color)';
-            document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--pink-color);");
-            body.style.backgroundImage = 'linear-gradient( to bottom, rgba(250, 138, 187, 0.3)  10.8%, rgba(255, 201, 202, 0.3) 90%)';
-            for (let b of bots_h3) {
-                b.style.borderBottom = '1px solid var(--pink-color)';
-            }
-            for (let h of head) {
-                h.style.color = 'var(--pink-color)'
-            }
-
-        } else if (name === 'Purple') {
-            new_color.style.backgroundColor = 'var(--purple-color)';
-            new_color.style.boxShadow = '0px 0px 4px 1px var(--purple-color)';
-            login_button_color.style.backgroundColor = 'var(--purple-color)';
-            search_icon.style.backgroundColor = 'var(--purple-color)';
-            document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--purple-color);");
-            body.style.backgroundImage = 'linear-gradient( to bottom, rgba(137, 87, 255, 0.25) 10.8%, rgba(205, 180, 219, 0.5) 90%)';
-            for (let b of bots_h3) {
-                b.style.borderBottom = '1px solid var(--purple-color)';
-            }
-            for (let h of head) {
-                h.style.color = 'var(--purple-color)'
-            }
-
-        } else if (name === 'Blue') {
-            new_color.style.backgroundColor = 'var(--blue-color)';
-            new_color.style.boxShadow = '0px 0px 4px 1px var(--blue-color)';
-            login_button_color.style.backgroundColor = 'var(--blue-color)';
-            search_icon.style.backgroundColor = 'var(--blue-color)';
-            document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--blue-color);");
-            body.style.backgroundImage = 'linear-gradient( to bottom, rgba(0, 187, 255, 0.15) 10.8%, rgba(205, 180, 219, 0.5) 90%)';
-            for (let b of bots_h3) {
-                b.style.borderBottom = '1px solid var(--blue-color)';
-            }
-            for (let h of head) {
-                h.style.color = 'var(--blue-color)'
-            }
-
-        } else if (name === 'Green') {
-            new_color.style.backgroundColor = 'var(--green-color)';
-            new_color.style.boxShadow = '0px 0px 4px 1px var(--green-color)';
-            login_button_color.style.backgroundColor = 'var(--green-color)';
-            search_icon.style.backgroundColor = 'var(--green-color)';
-            document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--green-color);");
-            body.style.backgroundImage = 'linear-gradient( to bottom, rgba(0, 204, 137, 0.2) 10.8%, rgba(220, 240, 249, 0.8) 90%)';
-            for (let b of bots_h3) {
-                b.style.borderBottom = '1px solid var(--green-color)';
-            }
-            for (let h of head) {
-                h.style.color = 'var(--green-color)'
-            }
-
-        } else if (name === 'Yellow') {
-            new_color.style.backgroundColor = 'var(--yellow-color)';
-            new_color.style.boxShadow = '0px 0px 4px 1px var(--yellow-color)';
-            login_button_color.style.backgroundColor = 'var(--yellow-color)';
-            search_icon.style.backgroundColor = 'var(--yellow-color)';
-            document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--yellow-color);");
-            body.style.backgroundImage = 'linear-gradient( to bottom, rgba(255, 187, 0, 0.2) 10.8%, rgba(220, 240, 0, 0.15) 90%)';
-            for (let b of bots_h3) {
-                b.style.borderBottom = '1px solid var(--yellow-color)';
-            }
-            for (let h of head) {
-                h.style.color = 'var(--yellow-color)'
-            }
-
-        } else if (name == 'Orange') {
-            new_color.style.backgroundColor = 'var(--orange-color)';
-            new_color.style.boxShadow = '0px 0px 4px 1px var(--orange-color)';
-            login_button_color.style.backgroundColor = 'var(--orange-color)';
-            search_icon.style.backgroundColor = 'var(--orange-color)';
-            document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", "background: var(--orange-color);");
-            body.style.backgroundImage = 'linear-gradient( to bottom, rgba(255, 107, 0, 0.3) 10.8%, rgba(255, 101, 102, 0.3) 90%)';
-            for (let b of bots_h3) {
-                b.style.borderBottom = '1px solid var(--orange-color)';
-            }
-            for (let h of head) {
-                h.style.color = 'var(--orange-color)'
+        for (let i = 0; i < colors_array.length; i++) {
+            if (name == colors_array[i]) {
+                new_color.style.backgroundColor = `var(--${name.toLowerCase()}-color)`;
+                new_color.style.boxShadow = `0px 0px 4px 1px var(--${name.toLowerCase()}-color)`;
+                login_button_color.style.backgroundColor = `var(--${name.toLowerCase()}-color)`;
+                search_icon.style.backgroundColor = `var(--${name.toLowerCase()}-color)`;
+                body.style.backgroundImage = `${background_array[i]}`;
+                document.styleSheets[1].addRule("::-webkit-scrollbar-thumb", `background: var(--${name.toLowerCase()}-color)`);
+                for (let b of bots_h3) {
+                    b.style.borderBottom = `1px solid var(--${name.toLowerCase()}-color)`;
+                }
+                for (let h of head) {
+                    h.style.color = `var(--${name.toLowerCase()}-color)`
+                }
             }
         }
-    });
-});
+
+    })
+}
 
 window.addEventListener('scroll', (e) => {
     container_top.style.background = '#ffffffE6';
-    // container_top.style.opacity = '0.95';
-
 
     if (d.scrollTop > 140) {
         nav_search_bar.style.opacity = '1';
