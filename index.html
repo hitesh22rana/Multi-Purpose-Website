@@ -13,6 +13,93 @@
 
 <body>
 
+    <!-- SignUp and Login form -->
+
+    <div class="complete-form-container">
+        <div class="form-container">
+          <input type="checkbox" id="flip">
+          <div class="cover">
+            <img src="./assets/signup.jpg" alt="login-img">
+          </div>
+          <div class="cross">
+              <button class="back_to_homepage login_side">Back</button>
+              <button class="back_to_homepage singup_side">Back</button>
+          </div>
+    
+          <form action="#" class="sign_log_form">
+            <div class="form-content">
+              <div class="login-form">
+
+                  <div class="title">Login</div>
+      
+                  <div class="input-boxes">
+                    <div class="input-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Enter your email" required />
+                    </div>
+      
+                    <div class="input-box">
+                      <i class="fas fa-lock"></i>
+                      <input
+                        type="password"
+                        placeholder="Enter your password"
+                        required
+                      />
+                    </div>
+      
+                    <div class="text"><a href="#">Forgot password?</a></div>
+      
+                    <div class="button input-box">
+                      <input type="submit" value="Submit" />
+                    </div>
+      
+                    <div class="text signup-text">
+                      Don't have an account?
+                      <label for="flip">Signup now</label>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="signup-form">
+                  <div class="title">Signup</div>
+      
+                  <div class="input-boxes">
+                    <div class="input-box">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Enter your name" required />
+                    </div>
+      
+                    <div class="input-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Enter your email" required />
+                    </div>
+      
+                    <div class="input-box">
+                      <i class="fas fa-lock"></i>
+                      <input
+                        type="password"
+                        placeholder="Enter your password"
+                        required
+                      />
+                    </div>
+      
+                    <div class="button input-box">
+                      <input type="submit" value="Submit" />
+                    </div>
+      
+                    <div class="text login-text">
+                      Already have an account?
+                      <label for="flip">Login now</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <!-- Nav bar -->
+
     <div id="container-top">
         <nav id="nav-bar">
             <div class="nav-left">
@@ -119,8 +206,6 @@
                 <div class="contents">Squid Game</div>
                 <div class="contents">Game</div>
             </div>
-
-
         </div>
 
         <script src="./script/script.js"></script>

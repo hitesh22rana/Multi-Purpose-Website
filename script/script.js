@@ -12,8 +12,13 @@ const bottom = document.querySelector('.bottom');
 const d = document.documentElement;
 const search_icon = document.querySelector('.search-icon');
 const nav_search_bar = document.querySelector('.nav-bar-search-bar-container');
-const search_bar_container = document.querySelector('.search-bar-container')
-const site_search = document.querySelector('#site-search')
+const search_bar_container = document.querySelector('.search-bar-container');
+const site_search = document.querySelector('#site-search');
+const signup_form = document.querySelector('#login');
+const top_heading = document.querySelector('.top-heading');
+const search_container = document.querySelector('.search-container');
+const sign_up_login = document.querySelector('.complete-form-container');
+const back_button = document.querySelectorAll('.back_to_homepage');
 
 const colors_array = ['Red', 'Pink', 'Purple', 'Blue', 'Green', 'Yellow', 'Orange']
 const background_array = ['linear-gradient( to bottom, rgba(255, 101, 102, 0.3) 10.8%, rgba(205, 180, 219, 0.5) 90%)',
@@ -25,6 +30,22 @@ const background_array = ['linear-gradient( to bottom, rgba(255, 101, 102, 0.3) 
     'linear-gradient( to bottom, rgba(255, 107, 0, 0.3) 10.8%, rgba(255, 101, 102, 0.3) 90%)'
 ]
 
+signup_form.addEventListener('click', () => {
+    sign_up_login.style.display = 'flex';
+    container_top.style.display = 'none';
+    top_heading.style.display = 'none';
+    search_container.style.display = 'none';
+    bottom.style.display = 'none';
+});
+
+for (let individual_back_button of back_button)
+    individual_back_button.addEventListener('click', (e) => {
+        sign_up_login.style.display = 'none';
+        container_top.style.display = 'flex';
+        top_heading.style.display = 'flex';
+        search_container.style.display = 'flex';
+        bottom.style.display = 'flex';
+});
 
 user_logo.addEventListener('click', () => {
     drop_down.classList.toggle('drop-down-menu-display');
