@@ -653,7 +653,7 @@ body {
     min-width: 350px;
     top: 0;
     z-index: 9999;
-    /* transition: all 1s; */
+    transition: all 1s;
 }
 
 #nav-bar {
@@ -1080,10 +1080,32 @@ input:checked+.slider:before {
 .left {
     flex: 2;
     margin-right: 20px;
+    animation: slidefromleft 1s;
+}
+@keyframes slidefromleft {
+    0%{
+        transform: translate(-120%);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
 }
 
 .right {
     flex: 1;
+     animation: slidefromright 1s ;
+}
+@keyframes slidefromright {
+    0%{
+        transform: translate(120%);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
 }
 
 .contents img {
