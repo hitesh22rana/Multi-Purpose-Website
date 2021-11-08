@@ -2,12 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+
 /* Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* Global changes */
+
 * {
     margin: 0;
     padding: 0;
@@ -101,7 +104,7 @@ body {
     min-width: 350px;
     top: 0;
     z-index: 9999;
-    /* transition: all 1s; */
+    transition: all 1s;
 }
 
 #nav-bar {
@@ -528,10 +531,32 @@ input:checked+.slider:before {
 .left {
     flex: 2;
     margin-right: 20px;
+    animation: slidefromleft 1s;
+}
+@keyframes slidefromleft {
+    0%{
+        transform: translate(-120%);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
 }
 
 .right {
     flex: 1;
+     animation: slidefromright 1s ;
+}
+@keyframes slidefromright {
+    0%{
+        transform: translate(120%);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
 }
 
 .contents img {
@@ -638,6 +663,7 @@ back-one::before {
     filter: blur(3px);
 }
 
+
 /* Login-Sign-Up form */
 
 @media (max-width:920px) {
@@ -652,6 +678,7 @@ back-one::before {
     }
 }
 
+
 /* SignUp and Login form  */
 
 .complete-form-container {
@@ -659,7 +686,7 @@ back-one::before {
     display: none;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: whitesmoke;
     padding: 30px;
     position: relative;
@@ -669,14 +696,14 @@ back-one::before {
     position: sticky;
 }
 
-.form-container .cross{
+.form-container .cross {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .form-container .cross .login_side {
-    margin-left: 40%;    
+    margin-left: 40%;
 }
 
 .cross .back_to_homepage {
@@ -699,7 +726,7 @@ back-one::before {
     width: 100%;
     background: #fff;
     padding: 40px 30px;
-    box-shadow: 0 5px 10px rgba(0 , 0 , 0 , 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     perspective: 2700px;
     border-radius: 10px;
 }
@@ -733,7 +760,7 @@ back-one::before {
     background-color: #fff;
 }
 
-.form-container #flip:checked ~ .cover {
+.form-container #flip:checked~.cover {
     transform: rotateY(-180deg);
 }
 
@@ -796,7 +823,7 @@ back-one::before {
     padding: 0 30px;
     font-size: 17px;
     font-weight: 500;
-    border-bottom: 2px solid rgba(0 , 0 , 0 , 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -826,12 +853,12 @@ back-one::before {
     text-decoration: underline;
 }
 
-.sign_log_form .form-content .button{
+.sign_log_form .form-content .button {
     color: #fff;
     margin-top: 40px;
 }
 
-.sign_log_form .form-content .button input{
+.sign_log_form .form-content .button input {
     color: #fff;
     background: #7d2ae8;
     border-radius: 6px;
@@ -853,7 +880,7 @@ back-one::before {
     text-decoration: underline;
 }
 
-.sign_log_form .form-content .signup-text , 
+.sign_log_form .form-content .signup-text,
 .sign_log_form .form-content .login-text {
     margin-top: 25px;
     text-align: center;
@@ -863,35 +890,29 @@ back-one::before {
     display: none;
 }
 
+
 /* Media Queries */
 
-@media (max-width : 750px) {
-
+@media (max-width: 750px) {
     .form-container .cover {
         display: none;
     }
-
     .form-content .login-form,
     .form-content .signup-form {
         width: 100%;
     }
-
     .form-content .signup-form {
         display: none;
     }
-
-    .form-container #flip:checked ~ .sign_log_form .signup-form {
+    .form-container #flip:checked~.sign_log_form .signup-form {
         display: block;
     }
-
-    .form-container #flip:checked ~ .sign_log_form .login-form {
+    .form-container #flip:checked~.sign_log_form .login-form {
         display: none;
     }
-
     .login_side {
         display: none;
     }
-
     .form-container .cross {
         justify-content: end;
     }
